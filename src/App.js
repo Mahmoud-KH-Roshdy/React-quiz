@@ -67,7 +67,7 @@ function App() {
   useEffect(function () {
     async function handleFectchQuestions() {
       try {
-        const fectchQuestions = await fetch("http://localhost:9000/questions");
+        const fectchQuestions = await fetch("https://questionsdata.onrender.com/questions");
         if (!fectchQuestions.ok) throw new Error("Something with wrong with fetch data");
         const data = await fectchQuestions.json();
         dispatch({ type: "dataReceived", payLoad: data })
