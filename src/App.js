@@ -44,7 +44,7 @@ function reduce(state, action) {
             ? state.points + question.points
             : state.points,
       };
-      case"newQuestion":return {...state, index:state.index++,answer:null};
+      case"newQuestion":return {...state, index:state.index + 1,answer:null};
       case"finish":return {
         ...state, 
       status:"finish",
